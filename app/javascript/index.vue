@@ -1,21 +1,29 @@
-<template id="main-page">
+<template>
   <v-ons-page>
+
     <v-ons-toolbar>
-      <div class="center">Title</div>
+      <div class="center">えきぞちっくす！</div>
     </v-ons-toolbar>
 
-    <p style="text-align: center">
-      <v-ons-button @click="$ons.notification.alert('Hello World!')">
-        Click me!
-      </v-ons-button>
-    </p>
+    <v-ons-list>
+      <v-ons-list-header>TEXT INPUT</v-ons-list-header>
+      <v-ons-list-item>
+        <v-ons-input placeholder="Input your name" v-model="data"></v-ons-input>
+      </v-ons-list-item>
+      <v-ons-list-item>
+        {{ data }}
+      </v-ons-list-item>
+    </v-ons-list>
+
   </v-ons-page>
 </template>
 
 <script>
-  import Vue from 'vue'
-  var vm = new Vue({
-    el: '#main-page',
-    template: '#main-page'
-  });
+  export default {
+    data() {
+      return {
+        data: ''
+      }
+    }
+  };
 </script>
