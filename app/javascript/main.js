@@ -1,21 +1,22 @@
 import Vue        from 'vue';
-import VueRouter  from 'vue-router';
 import VueOnsen from 'vue-onsenui';
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 
-Vue.use(VueOnsen);
-Vue.use(VueRouter);
+import Index          from './index.vue'
+import ExoticsHeader  from './exotics_header.vue'
+import SideMenu       from './side_menu.vue'
 
-// ページごとのコンポーネントを定義
-const index        = Vue.extend(require('./index.vue'));
+Vue.use(VueOnsen)
+Vue.component('index', Index)
+Vue.component('exotics-header', ExoticsHeader)
+Vue.component('side-menu', SideMenu)
 
-// URLに対応するコンポーネントを定義
-const routes = [
-  { path: '/', component: index },
-];
-
-// ページ全体をVueコンポーネント化
+// ルートページ
 const app = new Vue({
-  router: new VueRouter({routes}),
-}).$mount('#app');
+  el: '#app',
+  data() {
+    return {
+    }
+  }
+});

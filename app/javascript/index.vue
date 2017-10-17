@@ -1,29 +1,34 @@
 <template>
-  <v-ons-page>
+  <v-ons-splitter>
 
-    <v-ons-toolbar>
-      <div class="center">えきぞちっくす！</div>
-    </v-ons-toolbar>
+    <!-- サイドメニュー -->
+    <side-menu :isOpen="isSideOpening" @slideSideMenu="slideSideMenu"/>
 
-    <v-ons-list>
-      <v-ons-list-header>TEXT INPUT</v-ons-list-header>
-      <v-ons-list-item>
-        <v-ons-input placeholder="Input your name" v-model="data"></v-ons-input>
-      </v-ons-list-item>
-      <v-ons-list-item>
-        {{ data }}
-      </v-ons-list-item>
-    </v-ons-list>
+    <!-- コンテンツ -->
+    <v-ons-splitter-content>
+      <v-ons-page>
+        <exotics-header @slideSideMenu="slideSideMenu"/>
+        <div class="content">
+          ぼでぃ
+        </div>
+      </v-ons-page>
+    </v-ons-splitter-content>
+  </v-ons-splitter>
 
-  </v-ons-page>
 </template>
 
 <script>
   export default {
+    name: 'index',
     data() {
       return {
-        data: ''
+        isSideOpening: false,
       }
+    },
+    methods: {
+      slideSideMenu(isOpen = null) {
+        this.isSideOpening = (isOpen === null) ? !this.isSideOpening : isOpen
+      },
     }
-  };
+  }
 </script>
