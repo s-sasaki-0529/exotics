@@ -3,14 +3,14 @@
 
     <!-- サイドメニュー -->
     <v-ons-splitter-side swipeable width="150px" collapse="" :open="isSideOpening" @preclose="slideSideMenu(false)">
-      <side-menu :isOpen="isSideOpening" @slideSideMenu="slideSideMenu"/>
+      <side-menu :isOpen="isSideOpening" @selectMenu="selectMenu"/>
     </v-ons-splitter-side>
 
     <!-- コンテンツ -->
     <v-ons-splitter-content>
       <v-ons-page>
         <exotics-header :selectedMenu="selectedMenu" @slideSideMenu="slideSideMenu"/>
-        <wrapper />
+        <wrapper :selectedMenu="selectedMenu"/>
       </v-ons-page>
     </v-ons-splitter-content>
 
@@ -31,6 +31,11 @@
       slideSideMenu(isOpen = null) {
         this.isSideOpening = (isOpen === null) ? !this.isSideOpening : isOpen
       },
+      selectMenu(key) {
+        console.log(key)
+        this.selectedMenu = key
+        this.slideSideMenu(false)
+      }
     }
   }
 </script>
