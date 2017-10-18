@@ -7,10 +7,8 @@
     <!-- コンテンツ -->
     <v-ons-splitter-content>
       <v-ons-page>
-        <exotics-header @slideSideMenu="slideSideMenu"/>
-        <div class="content">
-          ぼでぃ
-        </div>
+        <exotics-header :selectedMenu="selectedMenu" @slideSideMenu="slideSideMenu"/>
+        <wrapper />
       </v-ons-page>
     </v-ons-splitter-content>
   </v-ons-splitter>
@@ -23,6 +21,7 @@
     data() {
       return {
         isSideOpening: false,
+        selectedMenu:  'top',
       }
     },
     methods: {
