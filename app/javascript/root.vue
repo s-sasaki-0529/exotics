@@ -10,6 +10,7 @@
     <v-ons-splitter-content>
       <v-ons-page>
         <exotics-header @slideSideMenu="slideSideMenu"/>
+        <router-view></router-view>
       </v-ons-page>
     </v-ons-splitter-content>
 
@@ -19,7 +20,7 @@
 
 <script>
   export default {
-    name: 'index',
+    name: 'root',
     data() {
       return {
         isSideOpening: false,
@@ -30,6 +31,7 @@
         this.isSideOpening = (isOpen === null) ? !this.isSideOpening : isOpen
       },
       selectMenu(key) {
+        this.$router.push(key)
         this.slideSideMenu(false)
       }
     }

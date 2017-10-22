@@ -16,9 +16,7 @@
       return {
         menus: [
           {key: 'top',    isShow: true, label: 'トップ'},
-          {key: 'mypage', isShow: true, label: 'マイページ'},
-          {key: 'owners', isShow: true, label: '飼い主一覧'},
-          {key: 'logout', isShow: true, label: 'ログアウト'},
+          {key: 'owners', isShow: true, label: 'マイページ'},
         ]
       }
     },
