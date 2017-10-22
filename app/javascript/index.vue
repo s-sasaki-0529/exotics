@@ -9,8 +9,7 @@
     <!-- コンテンツ -->
     <v-ons-splitter-content>
       <v-ons-page>
-        <exotics-header :selectedMenu="selectedMenu" @slideSideMenu="slideSideMenu"/>
-        <wrapper :selectedMenu="selectedMenu"/>
+        <exotics-header @slideSideMenu="slideSideMenu"/>
       </v-ons-page>
     </v-ons-splitter-content>
 
@@ -24,7 +23,6 @@
     data() {
       return {
         isSideOpening: false,
-        selectedMenu:  'top',
       }
     },
     methods: {
@@ -32,7 +30,6 @@
         this.isSideOpening = (isOpen === null) ? !this.isSideOpening : isOpen
       },
       selectMenu(key) {
-        this.selectedMenu = key
         this.slideSideMenu(false)
       }
     }
