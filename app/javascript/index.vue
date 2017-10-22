@@ -32,7 +32,6 @@
         this.isSideOpening = (isOpen === null) ? !this.isSideOpening : isOpen
       },
       selectMenu(key) {
-        console.log(key)
         this.selectedMenu = key
         this.slideSideMenu(false)
       }
