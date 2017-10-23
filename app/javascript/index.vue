@@ -20,7 +20,7 @@
 
 <script>
   export default {
-    name: 'root',
+    name: 'index',
     data() {
       return {
         isSideOpening: false,
