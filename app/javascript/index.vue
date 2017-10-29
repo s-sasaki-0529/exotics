@@ -10,7 +10,9 @@
     <v-ons-splitter-content>
       <v-ons-page>
         <exotics-header @slideSideMenu="slideSideMenu"/>
-        <router-view></router-view>
+        <div class="main-content">
+          <router-view></router-view>
+        </div>
       </v-ons-page>
     </v-ons-splitter-content>
 
