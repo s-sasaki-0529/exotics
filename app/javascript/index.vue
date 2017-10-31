@@ -3,16 +3,23 @@
 
     <!-- サイドメニュー -->
     <v-ons-splitter-side swipeable width="150px" collapse="" :open="isSideOpening" @preclose="slideSideMenu(false)">
-      <side-menu :isOpen="isSideOpening" @selectMenu="selectMenu"/>
+      <side-menu :isOpen="isSideOpening" @slideSideMenu="slideSideMenu"/>
     </v-ons-splitter-side>
 
     <!-- コンテンツ -->
     <v-ons-splitter-content>
       <v-ons-page>
+
+        <!-- ヘッダー -->
         <exotics-header @slideSideMenu="slideSideMenu"/>
-        <div class="main-content">
-          <router-view></router-view>
-        </div>
+
+        <!-- タブメニュー -->
+        <v-ons-tabbar swipeable id="appTabbar" position="auto">
+          <v-ons-tab label="オーナー" icon="fa-user"></v-ons-tab>
+          <v-ons-tab label="ペット" icon="fa-paw"></v-ons-tab>
+          <v-ons-tab label="ブログ" icon="fa-book" ></v-ons-tab>
+        </v-ons-tabbar>
+
       </v-ons-page>
     </v-ons-splitter-content>
 
@@ -32,10 +39,6 @@
       slideSideMenu(isOpen = null) {
         this.isSideOpening = (isOpen === null) ? !this.isSideOpening : isOpen
       },
-      selectMenu(key) {
-        this.$router.push(key)
-        this.slideSideMenu(false)
-      }
     }
   }
 </script>

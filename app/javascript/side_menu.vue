@@ -1,7 +1,7 @@
 <template>
   <v-ons-page>
     <v-ons-list>
-      <v-ons-list-item v-for="menu in menus" @click="selectMenu($event)" :data-key="menu.key" modifier="chevron">
+      <v-ons-list-item v-for="menu in menus" @click="$emit('slideSideMenu')" :data-key="menu.key" modifier="chevron">
         {{ menu.label }}
       </v-ons-list-item>
     </v-ons-list>
@@ -21,10 +21,6 @@
       }
     },
     methods: {
-      selectMenu(e) {
-        const key = e.target.parentNode.dataset.key
-        this.$emit('selectMenu', key)
-      }
     }
   }
 </script>
