@@ -1,6 +1,5 @@
 // ライブラリのインポート
 import Vue        from 'vue';
-import VueRouter  from 'vue-router'
 import VueOnsen from 'vue-onsenui';
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
