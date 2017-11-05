@@ -4,7 +4,7 @@
     <!-- ヘッダー -->
     <exotics-header/>
 
-    <p>コンテンツ</p>
+    <owner />
 
     <!-- タブメニュー -->
     <v-ons-tabbar swipeable position="auto" :visible="tabVisible" :index.sync="tabIndex">

@@ -1,0 +1,32 @@
+.arrow-box {
+  $allow-box-color: #ffffff;
+  padding: 15px;
+  position: relative;
+  background: $allow-box-color;
+  border-radius: 5%;
+  max-width: 350px;
+  min-height: 40px;
+  text-align: left;
+  margin: 20px 15px 0px 15px;
+  span {
+    display: block;
+    vertical-align: middle;
+    color: #eee;
+  }
+  &:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 0); // 透過
+    border-width: 10px;
+    pointer-events: none;
+    left: calc(50% - 15px);
+    bottom: 100%;
+    border-bottom-color: $allow-box-color;
+    border-width: 15px;
+    margin-bottom: -2px;
+  }
+
+}
