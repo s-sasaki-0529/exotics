@@ -1,31 +1,20 @@
 <template>
-  <v-ons-splitter>
+  <v-ons-page>
 
-    <!-- サイドメニュー -->
-    <v-ons-splitter-side swipeable width="150px" collapse="" :open="isSideOpening" @preclose="slideSideMenu(false)">
-      <side-menu :isOpen="isSideOpening" @slideSideMenu="slideSideMenu"/>
-    </v-ons-splitter-side>
+    <!-- ヘッダー -->
+    <exotics-header/>
 
-    <!-- コンテンツ -->
-    <v-ons-splitter-content>
-      <v-ons-page>
+    <p>コンテンツ</p>
 
-        <!-- ヘッダー -->
-        <exotics-header @slideSideMenu="slideSideMenu"/>
+    <!-- タブメニュー -->
+    <v-ons-tabbar swipeable position="auto" :visible="tabVisible" :index.sync="tabIndex">
+      <v-ons-tab v-for="tab in tabs"
+        :icon="tab.icon"
+        :label="tab.label"
+      />
+    </v-ons-tabbar>
 
-        <!-- タブメニュー -->
-        <v-ons-tabbar swipeable position="auto" :visible="tabVisible" :index.sync="tabIndex">
-          <v-ons-tab v-for="tab in tabs"
-            :icon="tab.icon"
-            :label="tab.label"
-          />
-        </v-ons-tabbar>
-
-      </v-ons-page>
-    </v-ons-splitter-content>
-
-  </v-ons-splitter>
-
+  </v-ons-page>
 </template>
 
 <script>
@@ -33,7 +22,6 @@
     name: 'index',
     data() {
       return {
-        isSideOpening: false,
         tabIndex: 1,
         tabVisible: true,
         tabs: [
@@ -56,9 +44,6 @@
       }
     },
     methods: {
-      slideSideMenu(isOpen = null) {
-        this.isSideOpening = (isOpen === null) ? !this.isSideOpening : isOpen
-      },
     }
   }
 </script>
