@@ -13,6 +13,7 @@
 
 <script>
   import owner from './owner/owner.vue'
+  import pets  from './owner/pets.vue'
   export default {
     name: 'index',
     data() {
@@ -22,7 +23,7 @@
           {
             icon: 'fa-home',
             label: 'ホーム',
-            page: owner,
+            page: pets,
           },
           {
             icon: 'fa-user',
@@ -39,6 +40,6 @@
     },
     methods: {
     },
-    components: { owner },
+    components: { owner, pets },
   }
 </script>
