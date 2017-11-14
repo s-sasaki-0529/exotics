@@ -8,6 +8,7 @@ import 'onsenui/css/onsen-css-components.css';
 import Index          from './index.vue'
 import Header         from './header.vue'
 import Owner          from './owner/owner.vue'
+import Pets           from './owner/pets.vue'
 import ArrowBox       from './parts/arrow_box.vue'
 
 // Vueプラグインの利用を宣言
@@ -17,6 +18,7 @@ Vue.use(VueOnsen)
 Vue.component('index', Index)
 Vue.component('exotics-header', Header)
 Vue.component('owner', Owner)
+Vue.component('pets', Pets)
 Vue.component('arrow-box', ArrowBox)
 
 // ルートページ
