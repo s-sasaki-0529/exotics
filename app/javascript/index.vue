@@ -4,46 +4,41 @@
     <!-- ヘッダー -->
     <exotics-header/>
 
-    <owner />
-
     <!-- タブメニュー -->
-    <v-ons-tabbar swipeable position="auto" :visible="tabVisible" :index.sync="tabIndex">
-      <v-ons-tab v-for="tab in tabs"
-        :icon="tab.icon"
-        :label="tab.label"
-      />
+    <v-ons-tabbar position="auto" :visible="true" :tabs="tabs" :index.sync="tabIndex">
     </v-ons-tabbar>
 
   </v-ons-page>
 </template>
 
 <script>
+  import owner from './owner/owner.vue'
   export default {
     name: 'index',
     data() {
       return {
-        tabIndex: 1,
-        tabVisible: true,
+        tabIndex: 0,
         tabs: [
+          {
+            icon: 'fa-home',
+            label: 'ホーム',
+            page: owner,
+          },
           {
             icon: 'fa-user',
             label: 'オーナー',
-            key: 'owner',
+            page: owner,
           },
           {
-            icon: 'fa-paw',
-            label: 'ペット',
-            key: 'owner',
-          },
-          {
-            icon: 'fa-book',
-            label: 'ブログ',
-            key: 'blog',
+            icon: 'fa-cog',
+            label: '設定',
+            page: owner,
           }
         ]
       }
     },
     methods: {
-    }
+    },
+    components: { owner },
   }
 </script>
