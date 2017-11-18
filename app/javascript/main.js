@@ -10,6 +10,7 @@ import Header         from './header.vue'
 import Owner          from './owner/owner.vue'
 import Pets           from './owner/pets.vue'
 import ArrowBox       from './parts/arrow_box.vue'
+import CarouselDots   from './parts/carousel_dots.vue'
 
 // Vueプラグインの利用を宣言
 Vue.use(VueOnsen)
@@ -20,6 +21,7 @@ Vue.component('exotics-header', Header)
 Vue.component('owner', Owner)
 Vue.component('pets', Pets)
 Vue.component('arrow-box', ArrowBox)
+Vue.component('carousel-dots', CarouselDots)
 
 // ルートページ
 const app = new Vue({
