@@ -12,6 +12,7 @@
 </template>
 
 <script>
+  import owners from './owner/owners'
   import owner from './owner/owner'
   import pets  from './owner/pets'
   import home  from './home/home'
@@ -30,7 +31,7 @@
           {
             icon: 'fa-user',
             label: 'オーナー',
-            page: pets,
+            page: owners,
           },
           {
             icon: 'fa-cog',
