@@ -23,19 +23,6 @@
           <div class="left">一言</div>
           <div class="ex-center">{{ description }}</div>
         </v-ons-list-item>
-        <v-ons-list-header>関連メニュー</v-ons-list-header>
-        <v-ons-list-item>
-          <div class="left"><v-ons-icon icon="fa-picture-o" class="list-item__icon"></v-ons-icon></div>
-          <div class="ex-center">写真一覧</div>
-        </v-ons-list-item>
-        <v-ons-list-item>
-          <div class="left"><v-ons-icon icon="fa-book" class="list-item__icon"></v-ons-icon></div>
-          <div class="ex-center">ブログ一覧</div>
-        </v-ons-list-item>
-        <v-ons-list-item>
-          <div class="left"><v-ons-icon icon="line-chart" class="list-item__icon"></v-ons-icon></div>
-          <div class="ex-center">体重記録</div>
-        </v-ons-list-item>
       </v-ons-list>
     </div>
   </v-ons-card>
