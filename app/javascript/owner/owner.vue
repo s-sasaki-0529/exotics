@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page class="owner center">
+  <v-ons-page class="owner ex-center">
     <div class="header">
       <h1>HousouP</h1>
     </div>

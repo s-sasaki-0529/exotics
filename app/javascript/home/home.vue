@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page class="home center">
+  <v-ons-page class="home ex-center">
     工事中
   </v-ons-page>
 </template>

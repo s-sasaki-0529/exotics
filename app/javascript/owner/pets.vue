@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page class="pets center">
+  <v-ons-page class="pets ex-center">
     <carousel-dots :length="3" :index.sync="current_index"/>
     <v-ons-carousel swipeable auto-scroll :auto-scroll-ratio="0.1" :index.sync="current_index">
       <v-ons-carousel-item v-for="pet in pets">

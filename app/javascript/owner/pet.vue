@@ -1,7 +1,7 @@
 <template>
   <v-ons-card class="pet">
-    <div class="title center">{{ name }}</div>
-    <div class="image center">
+    <div class="title ex-center">{{ name }}</div>
+    <div class="image ex-center">
       <img :src="picture">
     </div>
     <div class="content">
@@ -9,32 +9,32 @@
         <v-ons-list-header>基本情報</v-ons-list-header>
         <v-ons-list-item>
           <div class="left">性別</div>
-          <div class="center">{{ gender }}</div>
+          <div class="ex-center">{{ gender }}</div>
         </v-ons-list-item>
         <v-ons-list-item>
           <div class="left">年齢</div>
-          <div class="center">{{ age }}</div>
+          <div class="ex-center">{{ age }}</div>
         </v-ons-list-item>
         <v-ons-list-item>
           <div class="left">体重</div>
-          <div class="center">{{ weight }}</div>
+          <div class="ex-center">{{ weight }}</div>
         </v-ons-list-item>
         <v-ons-list-item>
           <div class="left">一言</div>
-          <div class="center">{{ description }}</div>
+          <div class="ex-center">{{ description }}</div>
         </v-ons-list-item>
         <v-ons-list-header>関連メニュー</v-ons-list-header>
         <v-ons-list-item>
           <div class="left"><v-ons-icon icon="fa-picture-o" class="list-item__icon"></v-ons-icon></div>
-          <div class="center">写真一覧</div>
+          <div class="ex-center">写真一覧</div>
         </v-ons-list-item>
         <v-ons-list-item>
           <div class="left"><v-ons-icon icon="fa-book" class="list-item__icon"></v-ons-icon></div>
-          <div class="center">ブログ一覧</div>
+          <div class="ex-center">ブログ一覧</div>
         </v-ons-list-item>
         <v-ons-list-item>
           <div class="left"><v-ons-icon icon="line-chart" class="list-item__icon"></v-ons-icon></div>
-          <div class="center">体重記録</div>
+          <div class="ex-center">体重記録</div>
         </v-ons-list-item>
       </v-ons-list>
     </div>
