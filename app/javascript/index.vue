@@ -14,6 +14,8 @@
 <script>
   import owner from './owner/owner'
   import pets  from './owner/pets'
+  import home  from './home/home'
+  import setting from './setting/setting'
   export default {
     name: 'index',
     data() {
@@ -23,23 +25,23 @@
           {
             icon: 'fa-home',
             label: 'ホーム',
-            page: pets,
+            page: home,
           },
           {
             icon: 'fa-user',
             label: 'オーナー',
-            page: owner,
+            page: pets,
           },
           {
             icon: 'fa-cog',
             label: '設定',
-            page: owner,
+            page: setting,
           }
         ]
       }
     },
     methods: {
     },
-    components: { owner, pets },
+    components: { owner, pets, home, setting },
   }
 </script>
