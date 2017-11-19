@@ -12,8 +12,8 @@
 </template>
 
 <script>
-  import owner from './owner/owner.vue'
-  import pets  from './owner/pets.vue'
+  import owner from './owner/owner'
+  import pets  from './owner/pets'
   export default {
     name: 'index',
     data() {

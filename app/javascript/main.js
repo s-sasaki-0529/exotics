@@ -5,12 +5,12 @@ import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 
 // 各種Vueコンポーネントのインポート
-import Index          from './index.vue'
-import Header         from './header.vue'
-import Owner          from './owner/owner.vue'
-import Pets           from './owner/pets.vue'
-import ArrowBox       from './parts/arrow_box.vue'
-import CarouselDots   from './parts/carousel_dots.vue'
+import Index          from './index'
+import Header         from './header'
+import Owner          from './owner/owner'
+import Pets           from './owner/pets'
+import ArrowBox       from './parts/arrow_box'
+import CarouselDots   from './parts/carousel_dots'
 
 // Vueプラグインの利用を宣言
 Vue.use(VueOnsen)

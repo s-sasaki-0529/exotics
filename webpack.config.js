@@ -26,10 +26,11 @@ module.exports = {
       },
     ],
   },
-  // vuejsを事前にコンパイル(?)
   resolve: {
+    // vuejsを事前にコンパイル(?)
     alias: {
       vue: 'vue/dist/vue.js',
     },
+    extensions: ['.vue', '.js'],
   },
 };

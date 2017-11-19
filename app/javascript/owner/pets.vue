@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import pet from './pet.vue'
+  import pet from './pet'
   export default {
     data() {
       return {
