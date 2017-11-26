@@ -30,7 +30,8 @@
     },
     methods: {
       select(selectedOwner) {
-        this.$emit('push-page', owner, {ownerId: selectedOwner.id})
+        this.$emit('select-owner', selectedOwner.id)
+        this.$emit('push-page', owner)
       }
     },
     components: {owner}

@@ -3,7 +3,8 @@
     <component
       v-for="(page, idx) in pageStack"
       :key="idx"
-      @push-page="push"
+      @push-page="pageStack.push($event)"
+      @select-owner="setOwnerId"
       :is="page"
       :ownerId="ownerId"
     >
@@ -21,9 +22,8 @@
       }
     },
     methods: {
-      push(component, params = {}) {
-        this.pageStack.push(component)
-        this.ownerId = params.ownerId
+      setOwnerId(ownerId) {
+        this.ownerId = ownerId
       }
     }
   }

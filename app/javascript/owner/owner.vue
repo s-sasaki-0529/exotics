@@ -8,7 +8,7 @@
       :text="owners[ownerId].comment"
     />
     <div class="menus">
-      <div class="menu" v-for="menu in menus">
+      <div class="menu" v-for="menu in menus" @click="menu.onClick">
         <div>
           <v-ons-fab class="fab"><v-ons-icon :icon="menu.icon"></v-ons-icon></v-ons-fab>
         </div>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+  import pets from './pets'
   export default {
     data() {
       return {
@@ -37,11 +38,11 @@
           },
         },
         menus: [
-          {label: 'ペット', icon: 'fa-paw'},
-          {label: 'ブログ', icon: 'fa-book'},
-          {label: '写真', icon: 'fa-picture-o'},
-          {label: '体重', icon: 'line-chart'},
-          {label: '備品', icon: 'shopping-basket'}
+          {label: 'ペット', icon: 'fa-paw',  onClick: this.showPets},
+          {label: 'ブログ', icon: 'fa-book', onClick: this.showBlog},
+          {label: '写真',   icon: 'fa-picture-o',    onClick: this.showPictures},
+          {label: '体重',   icon: 'line-chart',      onClick: this.showWeights},
+          {label: '備品',   icon: 'shopping-basket', onClick: this.showItems}
         ]
       }
     },
@@ -51,5 +52,18 @@
         required: true,
       }
     },
+    methods: {
+      showPets() {
+        this.$emit('push-page', pets)
+      },
+      showBlog() {
+      },
+      showPictures() {
+      },
+      showWeights() {
+      },
+      showItems() {
+      },
+    }
   }
 </script>

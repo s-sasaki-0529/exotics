@@ -1,9 +1,10 @@
 <template>
   <v-ons-page class="pets ex-center">
+    <toolbar title="ペット一覧" backButton="オーナー"/>
     <carousel-dots :length="3" :index.sync="current_index"/>
     <v-ons-carousel swipeable auto-scroll :auto-scroll-ratio="0.1" :index.sync="current_index">
-      <v-ons-carousel-item v-for="pet in pets">
-        <pet v-bind="pet" />
+      <v-ons-carousel-item v-for="(pet, idx) in pets">
+        <pet :key="idx" v-bind="pet" />
       </v-ons-carousel-item>
     </v-ons-carousel>
     <carousel-dots :length="3" :index.sync="current_index"/>
@@ -42,6 +43,12 @@
             picture: 'https://pbs.twimg.com/media/DFFzOumU0AAi-Ew.jpg',
           },
         ],
+      }
+    },
+    props: {
+      ownerId: {
+        type: Number,
+        required: true,
       }
     },
     components: {pet}
