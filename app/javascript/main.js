@@ -5,6 +5,7 @@ import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 
 // 各種Vueコンポーネントのインポート
+import Toolbar        from './toolbar'
 import Index          from './index'
 import Owner          from './owner/owner'
 import Pets           from './owner/pets'
@@ -15,6 +16,7 @@ import CarouselDots   from './parts/carousel_dots'
 Vue.use(VueOnsen)
 
 // 各種Vueコンポーネントの利用を宣言
+Vue.component('toolbar', Toolbar)
 Vue.component('index', Index)
 Vue.component('owner', Owner)
 Vue.component('pets', Pets)

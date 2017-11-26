@@ -1,5 +1,6 @@
 <template>
   <v-ons-page class="owners">
+    <toolbar title="オーナー一覧" />
     <v-ons-lit>
       <v-ons-list-item v-for="owner in owners" tappable :key="owner.id" @click="select(owner)">
         <div class="left">

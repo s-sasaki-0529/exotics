@@ -1,10 +1,7 @@
 <template>
   <v-ons-page>
-
-    <!-- タブメニュー -->
     <v-ons-tabbar position="auto" :visible="true" :tabs="tabs" :index.sync="tabIndex">
     </v-ons-tabbar>
-
   </v-ons-page>
 </template>
 
