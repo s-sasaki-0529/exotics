@@ -1,8 +1,6 @@
 <template>
   <v-ons-page class="owner ex-center">
-    <div class="header">
-      <h1>HousouP</h1>
-    </div>
+    <toolbar title="HousouP" backButton="一覧" />
     <div class="owner-icon">
       <img src="dummy_owner.jpg">
     </div>
@@ -32,6 +30,6 @@
           {label: '備品', icon: 'shopping-basket'}
         ]
       }
-    }
+    },
   }
 </script>

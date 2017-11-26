@@ -5,7 +5,7 @@ import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 
 // 各種Vueコンポーネントのインポート
-import Toolbar        from './toolbar'
+import Toolbar        from './parts/toolbar'
 import Index          from './index'
 import Owner          from './owner/owner'
 import Pets           from './owner/pets'
