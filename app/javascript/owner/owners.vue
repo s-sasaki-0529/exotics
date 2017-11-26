@@ -22,24 +22,15 @@
     data() {
       return {
         owners: [
-          {id: 1, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 2, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 3, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 4, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 5, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 6, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 7, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 8, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 9, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 10, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 11, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
-          {id: 12, thumbnail: '/dummy_owner.jpg', name: 'HousouP', pets: 'デグー(12)'},
+          {id: 1, thumbnail: '/dummy_owner.jpg', name: 'HousouP1', pets: 'デグー(12)'},
+          {id: 2, thumbnail: '/dummy_owner.jpg', name: 'HousouP2', pets: 'デグー(12)'},
+          {id: 3, thumbnail: '/dummy_owner.jpg', name: 'HousouP3', pets: 'デグー(12)'},
         ]
       }
     },
     methods: {
       select(selectedOwner) {
-        this.$emit('push-page', owner)
+        this.$emit('push-page', owner, {ownerId: selectedOwner.id})
       }
     },
     components: {owner}
