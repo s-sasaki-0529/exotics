@@ -20,23 +20,11 @@
 
 <script>
   import pets from './pets'
+  import dummy_owners from '../dummy/owners'
   export default {
     data() {
       return {
-        owners: {
-          1: {
-            thumbnail: '/dummy_owner.jpg', name: 'HousouP1',
-            comment: 'デグー12匹飼いの既婚プログラマです。12匹のデグーのお世話に毎日追われていますが、楽しくやっています。'
-          },
-          2: {
-            thumbnail: '/dummy_owner.jpg', name: 'HousouP2',
-            comment: 'デグー2匹と楽しく生活しています'
-          },
-          3: {
-            thumbnail: '/dummy_owner.jpg', name: 'HousouP3',
-            comment: 'はじめまして、デグー初心者ですがよろしくおねがいします。'
-          },
-        },
+        owners: dummy_owners,
         menus: [
           {label: 'ペット', icon: 'fa-paw',  onClick: this.showPets},
           {label: 'ブログ', icon: 'fa-book', onClick: this.showBlog},

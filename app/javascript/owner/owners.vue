@@ -18,14 +18,11 @@
 
 <script>
   import owner from './owner'
+  import dummy_owners from '../dummy/owners'
   export default {
     data() {
       return {
-        owners: [
-          {id: 1, thumbnail: '/dummy_owner.jpg', name: 'HousouP1', pets: 'デグー(12)'},
-          {id: 2, thumbnail: '/dummy_owner.jpg', name: 'HousouP2', pets: 'デグー(12)'},
-          {id: 3, thumbnail: '/dummy_owner.jpg', name: 'HousouP3', pets: 'デグー(12)'},
-        ]
+        owners: dummy_owners,
       }
     },
     methods: {
