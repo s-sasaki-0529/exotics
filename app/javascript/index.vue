@@ -1,9 +1,6 @@
 <template>
   <v-ons-page>
 
-    <!-- ヘッダー -->
-    <exotics-header/>
-
     <!-- タブメニュー -->
     <v-ons-tabbar position="auto" :visible="true" :tabs="tabs" :index.sync="tabIndex">
     </v-ons-tabbar>
