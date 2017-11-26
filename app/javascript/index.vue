@@ -12,8 +12,7 @@
 </template>
 
 <script>
-  import owners from './owner/owners'
-  import owner from './owner/owner'
+  import owner_navigator from './owner/owner_navigator'
   import pets  from './owner/pets'
   import home  from './home/home'
   import setting from './setting/setting'
@@ -31,7 +30,7 @@
           {
             icon: 'fa-user',
             label: 'オーナー',
-            page: owners,
+            page: owner_navigator,
           },
           {
             icon: 'fa-cog',
@@ -43,6 +42,6 @@
     },
     methods: {
     },
-    components: { owner, pets, home, setting },
+    components: { owner_navigator, pets, home, setting },
   }
 </script>
