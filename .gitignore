@@ -24,3 +24,5 @@
 app/assets/*
 package-lock.json
 Gemfile.lock
+
+.env

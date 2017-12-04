@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Twitter login
 gem 'omniauth'
 gem 'omniauth-twitter'
+
+# env
+gem 'dotenv-rails'
