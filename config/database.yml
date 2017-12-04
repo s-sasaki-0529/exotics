@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: exotics_development
+  username: exotics
+  password: 1q2w3e4r
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
