@@ -38,4 +38,24 @@ Pet.create([
     description: 'グルメで好き嫌い多め',
     image_url: 'https://pbs.twimg.com/media/DFFzOumU0AAi-Ew.jpg',
   },
+  {
+    user: user2, kind: degu, name: 'セン', gender: 'female', birthday: '2017/06/01',
+    description: 'チヒロと双子っぽいけど小柄な方',
+    image_url: 'https://pbs.twimg.com/media/DEXSFe1UIAQ03Xa.jpg',
+  },
+  {
+    user: user2, kind: degu, name: 'チヒロ', gender: 'female', birthday: '2017/06/01',
+    description: 'センと双子っぽいけど大柄な方',
+    image_url: 'https://pbs.twimg.com/media/DBtqxweV0AAAjHN.jpg',
+  },
+  {
+    user: user2, kind: degu, name: 'ハク', gender: 'male', birthday: '2017/06/01',
+    description: 'イケメン',
+    image_url: 'https://pbs.twimg.com/media/DGDQbJ6UIAEEIX5.jpg',
+  },
+  {
+    user: user3, kind: degu, name: 'バロン', gender: 'male', birthday: '2017/08/07',
+    description: '模様が一番カッコいい若手',
+    image_url: 'https://pbs.twimg.com/media/DIPSaNcVAAoeaZX.jpg:large',
+  },
 ])
