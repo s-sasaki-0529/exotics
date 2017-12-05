@@ -17,6 +17,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: exotics
+  password: 1q2w3e4r
+
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV['EXOTICS_DATABASE_PASSWORD'] %>
@@ -24,9 +27,6 @@ default: &default
 development:
   <<: *default
   database: exotics_development
-  username: exotics
-  password: 1q2w3e4r
-
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
