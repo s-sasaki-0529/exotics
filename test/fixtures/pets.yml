@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  kind: one
+  name: MyString
+  gender: 1
+  birthday: 2017-12-05
+  description: MyText
+  image_url: MyString
+  string: MyString
+
+two:
+  user: two
+  kind: two
+  name: MyString
+  gender: 1
+  birthday: 2017-12-05
+  description: MyText
+  image_url: MyString
+  string: MyString
