@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  has_many :pets
+
   #
   # Twitterユーザを取得、あるいは作成する
   # ニックネーム、アイコン画像は都度最新の状態に更新する
