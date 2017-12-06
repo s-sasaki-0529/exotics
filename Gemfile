@@ -59,3 +59,6 @@ gem 'omniauth-twitter'
 
 # env
 gem 'dotenv-rails'
+
+# serializer
+gem 'active_model_serializers'
