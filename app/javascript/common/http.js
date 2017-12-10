@@ -11,7 +11,7 @@ const http = {
    * ユーザ一覧を取得
    */
   getUsers(success_callback, failure_callback = nop) {
-    request.get(API_BASE + '/user').end((err, data) => {
+    request.get(API_BASE + '/users').end((err, data) => {
       if (err) {
         failure_callback(err)
       } else {
@@ -24,7 +24,7 @@ const http = {
    * ユーザ詳細を取得
    */
   getUser(user_id, success_callback, failure_callback = nop) {
-    request.get(API_BASE + '/user/' + user_id).end((err, data) => {
+    request.get(API_BASE + '/users/' + user_id).end((err, data) => {
       if (err) {
         failure_callback(err)
       } else {

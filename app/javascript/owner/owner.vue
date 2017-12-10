@@ -20,6 +20,7 @@
 
 <script>
   import pets from './pets'
+  import http from '../common/http'
   import dummy_owners from '../dummy/owners'
   export default {
     data() {
@@ -39,6 +40,11 @@
         type: Number,
         required: true,
       }
+    },
+    mounted() {
+      http.getUser(1, (data) => {
+        console.log(data)
+      })
     },
     methods: {
       showPets() {

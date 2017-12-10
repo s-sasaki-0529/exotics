@@ -1,4 +1,4 @@
-class Api::UserController < Api::ApplicationController
+class Api::UsersController < Api::ApplicationController
 
   #
   # ユーザ一覧を取得
