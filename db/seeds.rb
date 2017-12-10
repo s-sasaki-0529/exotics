@@ -3,19 +3,22 @@ user1 = User.create(
   provider: 'twitter',
   uid: '341992852',
   nickname: 'Sa2Knight',
-  image_url: 'http://pbs.twimg.com/profile_images/709702386550308864/0bKYD-gI_normal.jpg'
+  image_url: 'http://pbs.twimg.com/profile_images/709702386550308864/0bKYD-gI_normal.jpg',
+  introduction: 'デグー16匹飼ってます！デグー飼いの皆様！是非仲良くしてください！'
 )
 user2 = User.create(
   provider: 'twitter',
   uid: 'hogehogehogehoge1',
   nickname: 'HousouP',
-  image_url: 'https://pbs.twimg.com/profile_images/771362397030191104/rFMJRLF2_400x400.jpg'
+  image_url: 'https://pbs.twimg.com/profile_images/771362397030191104/rFMJRLF2_400x400.jpg',
+  introduction: '小動物が大好きで、毎日かわいがってます'
 )
 user3 = User.create(
   provider: 'twitter',
   uid: 'hgoehogehogehoge2',
   nickname: 'HoshiumeAmai',
-  image_url: 'https://pbs.twimg.com/profile_images/3580186613/9c42c1c8d3792eb3179b636c9728de27_400x400.jpeg'
+  image_url: 'https://pbs.twimg.com/profile_images/3580186613/9c42c1c8d3792eb3179b636c9728de27_400x400.jpeg',
+  introduction: 'デグー8匹と、チンチラ2匹を飼ってます。毎日楽しく生活しています。'
 )
 
 # sample kind
