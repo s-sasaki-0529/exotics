@@ -45,12 +45,16 @@
         this.$emit('push-page', pets)
       },
       showBlog() {
+        alert('未実装')
       },
       showPictures() {
+        alert('未実装')
       },
       showWeights() {
+        alert('未実装')
       },
       showItems() {
+        alert('未実装')
       },
     }
   }
