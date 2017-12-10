@@ -1,11 +1,11 @@
 <template>
   <v-ons-page class="owner ex-center">
-    <toolbar :title="owners[ownerId].name" backButton="一覧" />
+    <toolbar :title="owner.nickname" backButton="一覧" />
     <div class="owner-icon">
-      <img :src="owners[ownerId].thumbnail">
+      <img :src="owner.image_url">
     </div>
     <arrow-box
-      :text="owners[ownerId].comment"
+      :text="owner.introduction"
     />
     <div class="menus">
       <div class="menu" v-for="menu in menus" @click="menu.onClick">
@@ -25,7 +25,9 @@
   export default {
     data() {
       return {
-        owners: dummy_owners,
+        owner: {
+          nickname: '',
+        },
         menus: [
           {label: 'ペット', icon: 'fa-paw',  onClick: this.showPets},
           {label: 'ブログ', icon: 'fa-book', onClick: this.showBlog},
@@ -42,8 +44,8 @@
       }
     },
     mounted() {
-      http.getUser(1, (data) => {
-        console.log(data)
+      http.getUser(this.ownerId, (data) => {
+        this.owner = data
       })
     },
     methods: {
