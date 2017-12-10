@@ -1,0 +1,2 @@
+class UserDetailSerializer < UserOverviewSerializer
+end
