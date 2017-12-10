@@ -18,6 +18,19 @@ const http = {
         success_callback(data.body)
       }
     })
+  },
+
+  /**
+   * ユーザ詳細を取得
+   */
+  getUser(user_id, success_callback, failure_callback = nop) {
+    request.get(API_BASE + '/user/' + user_id).end((err, data) => {
+      if (err) {
+        failure_callback(err)
+      } else {
+        success_callback(data.body)
+      }
+    })
   }
 
 }
