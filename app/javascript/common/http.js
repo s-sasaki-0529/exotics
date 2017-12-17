@@ -37,6 +37,13 @@ const http = {
    * ユーザのペット一覧を取得
    */
   getUserPets(user_id, success_callback, failure_callback = nop) {
+    request.get(API_BASE + '/users/' + user_id + '/pets').end((err, data) => {
+      if (err) {
+        failure_callback(err)
+      } else {
+        success_callback(data.body)
+      }
+    })
   },
 
 }
