@@ -2,7 +2,7 @@
   <v-ons-card class="pet">
     <div class="title ex-center">{{ name }}</div>
     <div class="image ex-center">
-      <img :src="picture">
+      <img :src="image_url">
     </div>
     <div class="content">
       <v-ons-list>
@@ -48,14 +48,14 @@
         required: true,
       },
       weight: {
-        type: String,
+        type: Number,
         required: true,
       },
       description: {
         type: String,
         required: true,
       },
-      picture: {
+      image_url: {
         type: String,
         required: true,
       },

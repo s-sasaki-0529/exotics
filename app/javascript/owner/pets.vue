@@ -13,12 +13,12 @@
 
 <script>
   import pet from './pet'
-  import dummy_pets from '../dummy/pets'
+  import http from '../common/http'
   export default {
     data() {
       return {
         current_index: 0,
-        pets: dummy_pets[this.ownerId],
+        pets: [],
       }
     },
     props: {
@@ -26,6 +26,11 @@
         type: Number,
         required: true,
       }
+    },
+    beforeMount() {
+      http.getUserPets(this.ownerId, (pets) => {
+        this.pets = pets
+      })
     },
     components: {pet}
   }
